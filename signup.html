@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            margin-top: 100px;
+        }
+        div{
+            
+            width: 300px;
+            background-color: #49c9b0;
+            text-align: center;
+            line-height: 60px; 
+            padding: 20px;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+        }
+        h1{
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        input{
+            width: 80%;
+            height: 30px;
+            border: none;
+            padding: 10px;
+        }
+        #return{
+            width: 86.5%;
+            margin-bottom: 30px;
+            background-color: #16a589;
+            color: white;
+            font-weight: 500;
+            border: none;
+          
+        }
+        #signup{
+            width: 86.5%;
+            background-color: #16a589;
+            color: white;
+            font-weight: 500;
+            border: none;
+        
+       }
+    </style>
+</head>
+<body>
+    <div>
+        <form action="">
+            <h1>-Visitor-</h1>
+            <input type="text" placeholder="Full name">
+            <br>
+            <input type="email" placeholder="Email">
+            <br>
+            <input type="text" placeholder="Organization">
+            <br>
+            <input id="signup" type="submit" value="SIGN UP">
+            <br>
+            <input  id ="return" type="button" value="RETURN">
+        </form>
+      
+    </div>
+</body>
+<script>
+    document.querySelector("#signup").addEventListener("click",SignUp);
+    function SignUp(){
+        alert("Sign up is Successfully Completed");
+    }
+    document.querySelector("#return").addEventListener("click",reTurn);
+    function reTurn(){
+       location.href="";//Add login page link here
+    }
+</script>
+</html>
