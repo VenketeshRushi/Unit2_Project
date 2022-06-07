@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: 200px;
+            gap: 0px;
+            margin: auto;
+            width: 70%;
+            
+        }
+        #containe>div{
+            display: grid;
+            height: 100px;
+            margin: auto;
+            border: 1px solid red;
+            }
+            img{
+                
+                height: 400px;
+                margin: auto;
+            }
+    </style>
+</head>
+<body>
+    <div id="container" ></div>
+    
+</body>
+</html>
+<script>
+    let details=[
+        {image:"https://assets.ajio.com/medias/sys_master/root/20220121/BexF/61ea5a39aeb2695cdd244ba4/-473Wx593H-463134831-black-MODEL2.jpg",productName:"PAUSE",productDetails:"Men Cotton Long Sleeves Shrug" ,price:"₹ 359-76%"},
+        {image:"https://assets.ajio.com/medias/sys_master/root/20201002/XBEy/5f7628fbaeb269d563d07591/-473Wx593H-441105664-ltgrey-MODEL.jpg",productName:"JUBINATION",productDetails:"Men Wool Sleveless Sweater Pack of 1",price:"799 ₹-47%"}
+
+    ]
+    details.forEach(function (elem){
+
+        let box=document.createElement("div")
+        let avatar=document.createElement("img")
+        avatar.setAttribute("src",elem.image)
+        let pName=document.createElement("h1")
+        pName.innerText=elem.productName
+        let para=document.createElement("p")
+        para.innerText=elem.productDetails
+        let p1=document.createElement("p")
+        p1.innerText=elem.price
+        console.log(avatar,pName,para,p1)
+        box.append(avatar,pName,para,p1)
+         document.querySelector("#container").append(box)
+
+
+
+    })
+
+
+</script>
